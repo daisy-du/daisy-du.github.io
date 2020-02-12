@@ -2,6 +2,9 @@ html {
     box-sizing: border-box;
     overflow: hidden;
 }
+h4 {
+    margin-bottom: 10px;
+}
 body {
     height: 100vh;
     margin: 0;
@@ -10,6 +13,10 @@ body {
     -webkit-overflow-scrolling: touch;
     -webkit-perspective: 1px;
     perspective: 1px;
+}
+.left {
+    text-align: left;
+    display: inline-block;
 }
 img {
     width: 100%;
@@ -25,7 +32,7 @@ img {
 }
 .front {
     background-color: white;
-    padding: 7em 1em;
+    padding: 3em 1em;
     position: relative;
     z-index: 2;
 }
@@ -86,3 +93,27 @@ footer img {
         column-count: 1;
 	}	
 }
+
+/*
+flip card
+*/
+.card-flip > div {
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    transform: rotateY(0deg);
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+    position: absolute;
+  }
+  
+  .card-flip:hover .card-front {
+    transform: rotateY(-180deg);
+  }
+    
+  .card-flip:hover .card-back {
+    transform: rotateY(0deg);
+  }
